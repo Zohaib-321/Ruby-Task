@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+  ruby:
+    image: ruby:latest
+    command: bash -c 'gem install nokogiri && ruby fetch.rb --metadata https://www.google.com https://autify.com'
+    working_dir: /usr/app/
+    volumes:
+      - ./:/usr/app/
